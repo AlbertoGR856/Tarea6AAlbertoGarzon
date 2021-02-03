@@ -11,4 +11,8 @@ package tareaa6;
  */
 public class Genero {
     
+    private int numeroLibros;
+   
+    
+    
 }

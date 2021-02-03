@@ -10,5 +10,11 @@ package tareaa6;
  * @author GR6
  */
 public class Libros {
+
+    private String autor;
+    private String editorial;
+    private double precio;
+    private boolean disponible;
+    
     
 }

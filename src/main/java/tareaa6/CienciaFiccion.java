@@ -11,4 +11,8 @@ package tareaa6;
  */
 public class CienciaFiccion {
     
+    
+    private int numeroPaginas;
+    private String nombre;
+    
 }

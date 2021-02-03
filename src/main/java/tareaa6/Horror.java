@@ -11,4 +11,7 @@ package tareaa6;
  */
 public class Horror {
     
+    private int numeroPaginas;
+    
+    
 }
