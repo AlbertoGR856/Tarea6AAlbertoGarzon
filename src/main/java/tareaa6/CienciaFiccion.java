@@ -27,6 +27,21 @@ public class CienciaFiccion extends Genero {
 
         super();
     }
+    
+    
+    
+     @Override
+      public void libroDisponible(Libros libro) {
+
+        if (libro!= null) {
+
+            libro.setDisponible(true);
+            
+            System.out.println("El libro del genero Ciencia ficción esta disponible...");
+        }
+
+    }
+
 
     public int getNumeroPaginas() {
         return numeroPaginas;
@@ -75,7 +90,7 @@ public class CienciaFiccion extends Genero {
 
     @Override
     public String toString() {
-        return "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + ", nombre=" + nombre + '}';
+        return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + ", nombre=" + nombre + '}';
     }
 
 }

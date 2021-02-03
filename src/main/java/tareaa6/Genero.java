@@ -24,6 +24,18 @@ public class Genero extends Libros {
         super();
 
     }
+    
+    @Override
+      public void libroDisponible(Libros libro) {
+
+        if (libro!= null) {
+
+            libro.setDisponible(true);
+            
+            System.out.println("El Genero esta disponible...");
+        }
+
+    }
 
     public int getNumeroLibros() {
         return numeroLibros;
@@ -60,7 +72,7 @@ public class Genero extends Libros {
 
     @Override
     public String toString() {
-        return "Genero{" + "numeroLibros=" + numeroLibros + '}';
+        return super.toString() + "Genero{" + "numeroLibros=" + numeroLibros + '}';
     }
 
 }

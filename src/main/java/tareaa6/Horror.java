@@ -24,6 +24,19 @@ public class Horror extends Genero {
         super();
 
     }
+    
+    
+    @Override
+      public void libroDisponible(Libros libro) {
+
+        if (libro!= null) {
+
+            libro.setDisponible(true);
+            
+            System.out.println("El libro del genero Horror esta disponible...");
+        }
+
+    }
 
     public int getNumeroPaginas() {
         return numeroCapitulos;
@@ -60,7 +73,7 @@ public class Horror extends Genero {
 
     @Override
     public String toString() {
-        return "Horror{" + "numeroPaginas=" + numeroCapitulos + '}';
+        return super.toString() +  "Horror{" + "numeroPaginas=" + numeroCapitulos + '}';
     }
 
 }

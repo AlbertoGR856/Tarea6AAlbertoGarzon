@@ -29,6 +29,17 @@ public class Libros {
         
         
     }
+    
+     public void libroDisponible(Libros libro) {
+
+        if (libro!= null) {
+
+            libro.setDisponible(true);
+            
+            System.out.println("El libro esta disponible...");
+        }
+
+    }
 
     public String getAutor() {
         return autor;
