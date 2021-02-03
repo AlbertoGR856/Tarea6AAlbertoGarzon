@@ -11,20 +11,21 @@ import java.util.Objects;
  *
  * @author GR6
  */
-public class CienciaFiccion {
-    
-    
+public class CienciaFiccion extends Genero {
+
     private int numeroPaginas;
     private String nombre;
 
-    public CienciaFiccion(int numeroPaginas, String nombre) {
+    public CienciaFiccion(String autor, String editorial, double precio, boolean disponible, int numeroLibros, int numeroPaginas, String nombre) {
+
+        super( autor, editorial,  precio,  disponible, numeroLibros);
         this.numeroPaginas = numeroPaginas;
         this.nombre = nombre;
     }
-    
-    public CienciaFiccion(){
-        
-        
+
+    public CienciaFiccion() {
+
+        super();
     }
 
     public int getNumeroPaginas() {
@@ -76,7 +77,5 @@ public class CienciaFiccion {
     public String toString() {
         return "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + ", nombre=" + nombre + '}';
     }
-    
-    
-    
+
 }

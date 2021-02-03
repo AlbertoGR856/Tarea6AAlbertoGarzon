@@ -9,32 +9,34 @@ package tareaa6;
  *
  * @author GR6
  */
-public class Horror {
-    
-    private int numeroPaginas;
+public class Horror extends Genero {
 
-    public Horror(int numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+    private int numeroCapitulos;
+
+    public Horror(String autor, String editorial, double precio, boolean disponible, int numeroLibros, int numeroPaginas, String nombre, int numeroCapitulos) {
+
+        super(autor, editorial, precio, disponible, numeroLibros);
+        this.numeroCapitulos = numeroPaginas;
     }
 
-    
-    public Horror(){
+    public Horror() {
         
-        
-        
+        super();
+
     }
+
     public int getNumeroPaginas() {
-        return numeroPaginas;
+        return numeroCapitulos;
     }
 
     public void setNumeroPaginas(int numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+        this.numeroCapitulos = numeroPaginas;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 59 * hash + this.numeroPaginas;
+        hash = 59 * hash + this.numeroCapitulos;
         return hash;
     }
 
@@ -50,7 +52,7 @@ public class Horror {
             return false;
         }
         final Horror other = (Horror) obj;
-        if (this.numeroPaginas != other.numeroPaginas) {
+        if (this.numeroCapitulos != other.numeroCapitulos) {
             return false;
         }
         return true;
@@ -58,10 +60,7 @@ public class Horror {
 
     @Override
     public String toString() {
-        return "Horror{" + "numeroPaginas=" + numeroPaginas + '}';
+        return "Horror{" + "numeroPaginas=" + numeroCapitulos + '}';
     }
-    
-    
-    
-    
+
 }

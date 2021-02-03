@@ -9,18 +9,22 @@ package tareaa6;
  *
  * @author GR6
  */
-public class Genero {
-    
+public class Genero extends Libros {
+
     private int numeroLibros;
 
-    public Genero(int numeroLibros) {
+    public Genero(String autor, String editorial, double precio, boolean disponible, int numeroLibros) {
+
+        super(autor, editorial, precio, disponible);
         this.numeroLibros = numeroLibros;
     }
 
-    public Genero(){
+    public Genero() {
         
-        
+        super();
+
     }
+
     public int getNumeroLibros() {
         return numeroLibros;
     }
@@ -58,9 +62,5 @@ public class Genero {
     public String toString() {
         return "Genero{" + "numeroLibros=" + numeroLibros + '}';
     }
-   
-    
-    
-    
-    
+
 }
