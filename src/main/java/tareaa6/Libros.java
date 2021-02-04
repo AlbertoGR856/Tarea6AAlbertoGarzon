@@ -13,32 +13,41 @@ import java.util.Objects;
  */
 public class Libros {
 
+    private String nombre;
     private String autor;
     private String editorial;
     private double precio;
     private boolean disponible;
 
-    public Libros(String autor, String editorial, double precio, boolean disponible) {
+    public Libros(String nombre, String autor, String editorial, double precio, boolean disponible) {
+        this.nombre = nombre;
         this.autor = autor;
         this.editorial = editorial;
         this.precio = precio;
         this.disponible = disponible;
     }
-    
-    public Libros(){
-        
-        
-    }
-    
-     public void libroDisponible(Libros libro) {
 
-        if (libro!= null) {
+    public Libros() {
+
+    }
+
+    public void libroDisponible(Libros libro) {
+
+        if (libro != null) {
 
             libro.setDisponible(true);
-            
+
             System.out.println("El libro esta disponible...");
         }
 
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getAutor() {
@@ -76,10 +85,11 @@ public class Libros {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.autor);
-        hash = 71 * hash + Objects.hashCode(this.editorial);
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.precio) ^ (Double.doubleToLongBits(this.precio) >>> 32));
-        hash = 71 * hash + (this.disponible ? 1 : 0);
+        hash = 97 * hash + Objects.hashCode(this.nombre);
+        hash = 97 * hash + Objects.hashCode(this.autor);
+        hash = 97 * hash + Objects.hashCode(this.editorial);
+        hash = 97 * hash + (int) (Double.doubleToLongBits(this.precio) ^ (Double.doubleToLongBits(this.precio) >>> 32));
+        hash = 97 * hash + (this.disponible ? 1 : 0);
         return hash;
     }
 
@@ -101,6 +111,9 @@ public class Libros {
         if (this.disponible != other.disponible) {
             return false;
         }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
         if (!Objects.equals(this.autor, other.autor)) {
             return false;
         }
@@ -112,9 +125,9 @@ public class Libros {
 
     @Override
     public String toString() {
-        return "Libros{" + "autor=" + autor + ", editorial=" + editorial + ", precio=" + precio + ", disponible=" + disponible + '}';
+        return "Libros{" + "nombre=" + nombre + ", autor=" + autor + ", editorial=" + editorial + ", precio=" + precio + ", disponible=" + disponible + '}';
     }
-    
-    
-    
+
+
+
 }

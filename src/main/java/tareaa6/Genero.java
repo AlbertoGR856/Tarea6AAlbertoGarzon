@@ -16,9 +16,9 @@ public class Genero extends Libros {
     private int numeroLibros;
     private String tipoLibro;
 
-    public Genero(String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro) {
+    public Genero(String nombre,String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro) {
 
-        super(autor, editorial, precio, disponible);
+        super(nombre, autor, editorial, precio, disponible);
         this.numeroLibros = numeroLibros;
         this.tipoLibro = tipoLibro;
     }
@@ -50,7 +50,7 @@ public class Genero extends Libros {
     
     public void leerLibro(){
         
-        System.out.println("Ha decidido leer el tipo de libro: " +tipoLibro);
+        System.out.println("Ha decidido leer un genero ");
     }
 
     public int getNumeroLibros() {

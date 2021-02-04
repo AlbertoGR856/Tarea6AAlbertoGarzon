@@ -13,10 +13,10 @@ public class Horror extends Genero {
 
     private int numeroCapitulos;
 
-    public Horror(String autor, String editorial, double precio, boolean disponible, int numeroLibros, int numeroPaginas, String nombre, String tipoLibro, int numeroCapitulos) {
+    public Horror(String nombre, String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroCapitulos) {
 
-        super(autor, editorial, precio, disponible, numeroLibros, tipoLibro);
-        this.numeroCapitulos = numeroPaginas;
+        super(nombre,autor, editorial, precio, disponible, numeroLibros, tipoLibro);
+        this.numeroCapitulos = numeroCapitulos;
     }
 
     public Horror() {

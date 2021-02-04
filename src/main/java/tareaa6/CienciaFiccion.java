@@ -15,9 +15,9 @@ public class CienciaFiccion extends Genero {
 
     private int numeroPaginas;
 
-    public CienciaFiccion(String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroPaginas) {
+    public CienciaFiccion(String nombre, String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroPaginas) {
 
-        super(autor, editorial, precio, disponible, numeroLibros, tipoLibro);
+        super(nombre,autor, editorial, precio, disponible, numeroLibros, tipoLibro);
         this.numeroPaginas = numeroPaginas;
 
     }
