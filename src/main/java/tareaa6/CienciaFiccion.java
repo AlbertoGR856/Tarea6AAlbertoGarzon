@@ -92,7 +92,7 @@ public class CienciaFiccion extends Genero {
         return true;
     }
 
-    //Método toString
+   //Método toString. Es un método sobreescrito y polimorfico, con la instruccion super() se incluye los atributos de la clase padre e hija
     @Override
     public String toString() {
         return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + '}';
