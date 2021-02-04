@@ -42,8 +42,39 @@ public class Prueba {
         listaLibros.add(libro4);
         listaLibros.add(libro5);
         listaLibros.add(libro6);
-       
 
+        for (Libros aux : listaLibros) {
+
+            if (aux instanceof Genero) {
+                ((Genero) aux).establecerLibrosGenero();
+            }
+
+            if (aux instanceof CienciaFiccion) {
+                ((CienciaFiccion) ((Genero) aux)).establecerNumeroPaginas();
+            }
+
+            if (aux instanceof Horror) {
+                ((Horror) ((Genero) aux)).establecerNumeroCapitulos();
+            }
+
+            aux.libroDisponible(libro1);
+            aux.libroDisponible(libro2);
+            aux.libroDisponible(libro3);
+            aux.libroDisponible(libro4);
+            aux.libroDisponible(libro5);
+            aux.libroDisponible(libro6);
+
+            System.out.println("-----------------------------");
+
+        }
+
+        System.out.println("La posicion corresponde al libro: " + listaLibros.indexOf(libro4));
+
+        System.out.println("¿Existe este libro?: " + listaLibros.contains(libro6));
+        
+        System.out.println("Borramos el libro de la lista: " + listaLibros.remove(libro1));
+        
+         listaLibros.forEach(System.out::println);
     }
 
 }
