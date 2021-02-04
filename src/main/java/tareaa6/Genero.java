@@ -24,21 +24,26 @@ public class Genero extends Libros {
     }
 
     public Genero() {
-        
+
         super();
 
     }
-    
-    @Override
-      public void libroDisponible(Libros libro) {
 
-        if (libro!= null) {
+    @Override
+    public void libroDisponible(Libros libro) {
+
+        if (libro != null) {
 
             libro.setDisponible(true);
-            
+
             System.out.println("El libro esta disponible...");
         }
 
+    }
+
+    public void establecerLibrosGenero() {
+
+        this.numeroLibros = 100;
     }
 
     public int getNumeroLibros() {
@@ -88,9 +93,7 @@ public class Genero extends Libros {
 
     @Override
     public String toString() {
-        return  super.toString() + "Genero{" + "numeroLibros=" + numeroLibros + ", tipoLibro=" + tipoLibro + '}';
+        return super.toString() + "Genero{" + "numeroLibros=" + numeroLibros + ", tipoLibro=" + tipoLibro + '}';
     }
-
-      
 
 }

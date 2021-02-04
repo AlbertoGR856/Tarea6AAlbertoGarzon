@@ -26,6 +26,9 @@ public class Horror extends Genero {
     }
     
     
+   
+    
+    
     @Override
       public void libroDisponible(Libros libro) {
 
@@ -38,6 +41,12 @@ public class Horror extends Genero {
 
     }
 
+      
+       public void establecerNumeroCapitulos(){
+        
+        this.numeroCapitulos = 50;
+    }
+    
     public int getNumeroPaginas() {
         return numeroCapitulos;
     }

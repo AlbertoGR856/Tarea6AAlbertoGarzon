@@ -30,6 +30,7 @@ public class CienciaFiccion extends Genero {
     
     
     
+    
      @Override
       public void libroDisponible(Libros libro) {
 
@@ -42,6 +43,12 @@ public class CienciaFiccion extends Genero {
 
     }
 
+      
+      public void establecerNumeroPaginas(){
+        
+        this.numeroPaginas = 400;
+    }
+    
 
     public int getNumeroPaginas() {
         return numeroPaginas;
