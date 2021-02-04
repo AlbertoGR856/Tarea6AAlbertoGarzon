@@ -14,41 +14,41 @@ import java.util.Objects;
 public class CienciaFiccion extends Genero {
 
     private int numeroPaginas;
-    
 
     public CienciaFiccion(String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroPaginas) {
 
-        super( autor, editorial,  precio,  disponible, numeroLibros, tipoLibro);
+        super(autor, editorial, precio, disponible, numeroLibros, tipoLibro);
         this.numeroPaginas = numeroPaginas;
-        
+
     }
 
     public CienciaFiccion() {
 
         super();
     }
-    
-    
-    
-    
-     @Override
-      public void libroDisponible(Libros libro) {
 
-        if (libro!= null) {
+    @Override
+    public void libroDisponible(Libros libro) {
+
+        if (libro != null) {
 
             libro.setDisponible(true);
-            
+
             System.out.println("El libro del genero Ciencia ficción esta disponible...");
         }
 
     }
 
-      
-      public void establecerNumeroPaginas(){
-        
+    public void establecerNumeroPaginas() {
+
         this.numeroPaginas = 400;
     }
-    
+
+    @Override
+    public void leerLibro() {
+
+        System.out.println("Ha decidido leer el libro de Ciencia Ficcion " );
+    }
 
     public int getNumeroPaginas() {
         return numeroPaginas;
@@ -88,6 +88,4 @@ public class CienciaFiccion extends Genero {
         return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + '}';
     }
 
-   
-   
 }

@@ -45,6 +45,13 @@ public class Genero extends Libros {
 
         this.numeroLibros = 100;
     }
+    
+    
+    
+    public void leerLibro(){
+        
+        System.out.println("Ha decidido leer el tipo de libro: " +tipoLibro);
+    }
 
     public int getNumeroLibros() {
         return numeroLibros;
