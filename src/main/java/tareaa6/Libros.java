@@ -13,12 +13,14 @@ import java.util.Objects;
  */
 public class Libros {
 
+    //Atributos
     private String nombre;
     private String autor;
     private String editorial;
     private double precio;
     private boolean disponible;
 
+    //Constructor parametrizado
     public Libros(String nombre, String autor, String editorial, double precio, boolean disponible) {
         this.nombre = nombre;
         this.autor = autor;
@@ -27,10 +29,13 @@ public class Libros {
         this.disponible = disponible;
     }
 
+    //Constructor por defecto
     public Libros() {
 
     }
 
+    //Inventa un método “metodoA” en la clase A que se vaya a sobrescribir en B,C y D. 
+    //No puede ser ningún método heredado de Object, como toString, equals, etc. 
     public void libroDisponible(Libros libro) {
 
         if (libro != null) {
@@ -42,6 +47,7 @@ public class Libros {
 
     }
 
+    //Getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -82,6 +88,7 @@ public class Libros {
         this.disponible = disponible;
     }
 
+    //Método hashcode
     @Override
     public int hashCode() {
         int hash = 7;
@@ -93,6 +100,7 @@ public class Libros {
         return hash;
     }
 
+    //Método equals
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -123,6 +131,7 @@ public class Libros {
         return true;
     }
 
+    //Método toString
     @Override
     public String toString() {
         return "Libros{" + "nombre=" + nombre + ", autor=" + autor + ", editorial=" + editorial + ", precio=" + precio + ", disponible=" + disponible + '}';

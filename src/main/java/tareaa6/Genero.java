@@ -13,22 +13,26 @@ import java.util.Objects;
  */
 public class Genero extends Libros {
 
+    //Atributos
     private int numeroLibros;
     private String tipoLibro;
 
-    public Genero(String nombre,String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro) {
+    //Constructor parametrizado. Es polimorfico ya que incluye la instrucción super()
+    public Genero(String nombre, String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro) {
 
         super(nombre, autor, editorial, precio, disponible);
         this.numeroLibros = numeroLibros;
         this.tipoLibro = tipoLibro;
     }
 
+    //Constructor por defecto
     public Genero() {
 
         super();
 
     }
 
+    //Método sobreescrito de la clase padre Libros
     @Override
     public void libroDisponible(Libros libro) {
 
@@ -41,18 +45,19 @@ public class Genero extends Libros {
 
     }
 
+    //Crea un método “metodoB” que sólo exista en la clase B. No está sobrescrito.
     public void establecerNumerosLibros() {
 
         this.numeroLibros = 100;
     }
-    
-    
-    
-    public void leerLibro(){
-        
+
+    //Crea un método “metodoB2” en B que se vaya a sobrescribir en C y D. 
+    public void leerLibro() {
+
         System.out.println("Ha decidido leer un genero ");
     }
 
+    //Getters y setters
     public int getNumeroLibros() {
         return numeroLibros;
     }
@@ -69,6 +74,7 @@ public class Genero extends Libros {
         this.tipoLibro = tipoLibro;
     }
 
+    //Método hashcode
     @Override
     public int hashCode() {
         int hash = 7;
@@ -77,6 +83,7 @@ public class Genero extends Libros {
         return hash;
     }
 
+    //Método equals
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -98,6 +105,7 @@ public class Genero extends Libros {
         return true;
     }
 
+    //Método toString. Es un método sobreescrito y polimorfico, con la instruccion super() se incluye los atributos de la clase padre e hija
     @Override
     public String toString() {
         return super.toString() + "Genero{" + "numeroLibros=" + numeroLibros + ", tipoLibro=" + tipoLibro + '}';

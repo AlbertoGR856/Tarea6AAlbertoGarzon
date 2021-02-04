@@ -13,8 +13,10 @@ import java.util.Objects;
  */
 public class CienciaFiccion extends Genero {
 
+    //Atributo
     private int numeroPaginas;
 
+     //Constructor parametrizado. Es polimorfico ya que incluye la instrucción super()
     public CienciaFiccion(String nombre, String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroPaginas) {
 
         super(nombre,autor, editorial, precio, disponible, numeroLibros, tipoLibro);
@@ -22,11 +24,13 @@ public class CienciaFiccion extends Genero {
 
     }
 
+    //Constructor por defecto
     public CienciaFiccion() {
 
         super();
     }
 
+     //Método sobreescrito de la clase padre Libros
     @Override
     public void libroDisponible(Libros libro) {
 
@@ -39,17 +43,20 @@ public class CienciaFiccion extends Genero {
 
     }
 
+    //Crea un método “metodoC” que sólo exista en la clase C. 
     public void establecerNumeroPaginas() {
 
         this.numeroPaginas = 400;
     }
 
+    //Método sobreescrito de la clase Genero
     @Override
     public void leerLibro() {
 
         System.out.println("Ha decidido leer el libro de Ciencia Ficcion " );
     }
 
+      //Getters y setters
     public int getNumeroPaginas() {
         return numeroPaginas;
     }
@@ -58,6 +65,7 @@ public class CienciaFiccion extends Genero {
         this.numeroPaginas = numeroPaginas;
     }
 
+      //Método hashcode
     @Override
     public int hashCode() {
         int hash = 3;
@@ -65,6 +73,7 @@ public class CienciaFiccion extends Genero {
         return hash;
     }
 
+     //Método equals
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -83,6 +92,7 @@ public class CienciaFiccion extends Genero {
         return true;
     }
 
+    //Método toString
     @Override
     public String toString() {
         return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + '}';

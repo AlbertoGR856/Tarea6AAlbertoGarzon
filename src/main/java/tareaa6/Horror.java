@@ -11,20 +11,24 @@ package tareaa6;
  */
 public class Horror extends Genero {
 
+    //Atributo
     private int numeroCapitulos;
 
+     //Constructor parametrizado. Es polimorfico ya que incluye la instrucción super()
     public Horror(String nombre, String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroCapitulos) {
 
-        super(nombre,autor, editorial, precio, disponible, numeroLibros, tipoLibro);
+        super(nombre, autor, editorial, precio, disponible, numeroLibros, tipoLibro);
         this.numeroCapitulos = numeroCapitulos;
     }
 
+    //Constructor por defecto
     public Horror() {
 
         super();
 
     }
 
+     //Método sobreescrito de la clase padre Libros
     @Override
     public void libroDisponible(Libros libro) {
 
@@ -37,17 +41,20 @@ public class Horror extends Genero {
 
     }
 
+    //Crea un método “metodoD” que sólo exista en la clase D.
     public void establecerNumeroCapitulos() {
 
         this.numeroCapitulos = 50;
     }
 
+    //Método sobreescrito de la clase Genero
     @Override
     public void leerLibro() {
 
         System.out.println("Ha decidido leer el libro de Horror ");
     }
 
+    //Getters y setters
     public int getNumeroPaginas() {
         return numeroCapitulos;
     }
@@ -56,6 +63,7 @@ public class Horror extends Genero {
         this.numeroCapitulos = numeroPaginas;
     }
 
+    //Método hashcode
     @Override
     public int hashCode() {
         int hash = 7;
@@ -63,6 +71,7 @@ public class Horror extends Genero {
         return hash;
     }
 
+    //Método equals
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -81,6 +90,7 @@ public class Horror extends Genero {
         return true;
     }
 
+    //Método toString
     @Override
     public String toString() {
         return super.toString() + "Horror{" + "numeroPaginas=" + numeroCapitulos + '}';
