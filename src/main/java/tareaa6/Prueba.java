@@ -46,7 +46,7 @@ public class Prueba {
         for (Libros aux : listaLibros) {
 
             if (aux instanceof Genero) {
-                ((Genero) aux).establecerLibrosGenero();
+                ((Genero) aux).establecerNumerosLibros();
             }
 
             if (aux instanceof CienciaFiccion) {

@@ -41,7 +41,7 @@ public class Genero extends Libros {
 
     }
 
-    public void establecerLibrosGenero() {
+    public void establecerNumerosLibros() {
 
         this.numeroLibros = 100;
     }
