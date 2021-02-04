@@ -14,13 +14,13 @@ import java.util.Objects;
 public class CienciaFiccion extends Genero {
 
     private int numeroPaginas;
-    private String nombre;
+    
 
-    public CienciaFiccion(String autor, String editorial, double precio, boolean disponible, int numeroLibros, int numeroPaginas, String nombre) {
+    public CienciaFiccion(String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroPaginas) {
 
-        super( autor, editorial,  precio,  disponible, numeroLibros);
+        super( autor, editorial,  precio,  disponible, numeroLibros, tipoLibro);
         this.numeroPaginas = numeroPaginas;
-        this.nombre = nombre;
+        
     }
 
     public CienciaFiccion() {
@@ -51,19 +51,10 @@ public class CienciaFiccion extends Genero {
         this.numeroPaginas = numeroPaginas;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 43 * hash + this.numeroPaginas;
-        hash = 43 * hash + Objects.hashCode(this.nombre);
+        int hash = 3;
+        hash = 61 * hash + this.numeroPaginas;
         return hash;
     }
 
@@ -82,15 +73,14 @@ public class CienciaFiccion extends Genero {
         if (this.numeroPaginas != other.numeroPaginas) {
             return false;
         }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
         return true;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + ", nombre=" + nombre + '}';
+        return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + '}';
     }
 
+   
+   
 }

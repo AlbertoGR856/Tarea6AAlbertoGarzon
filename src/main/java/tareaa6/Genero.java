@@ -5,6 +5,8 @@
  */
 package tareaa6;
 
+import java.util.Objects;
+
 /**
  *
  * @author GR6
@@ -12,11 +14,13 @@ package tareaa6;
 public class Genero extends Libros {
 
     private int numeroLibros;
+    private String tipoLibro;
 
-    public Genero(String autor, String editorial, double precio, boolean disponible, int numeroLibros) {
+    public Genero(String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro) {
 
         super(autor, editorial, precio, disponible);
         this.numeroLibros = numeroLibros;
+        this.tipoLibro = tipoLibro;
     }
 
     public Genero() {
@@ -32,7 +36,7 @@ public class Genero extends Libros {
 
             libro.setDisponible(true);
             
-            System.out.println("El Genero esta disponible...");
+            System.out.println("El libro esta disponible...");
         }
 
     }
@@ -45,10 +49,19 @@ public class Genero extends Libros {
         this.numeroLibros = numeroLibros;
     }
 
+    public String getTipoLibro() {
+        return tipoLibro;
+    }
+
+    public void setTipoLibro(String tipoLibro) {
+        this.tipoLibro = tipoLibro;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + this.numeroLibros;
+        hash = 83 * hash + this.numeroLibros;
+        hash = 83 * hash + Objects.hashCode(this.tipoLibro);
         return hash;
     }
 
@@ -67,12 +80,17 @@ public class Genero extends Libros {
         if (this.numeroLibros != other.numeroLibros) {
             return false;
         }
+        if (!Objects.equals(this.tipoLibro, other.tipoLibro)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Genero{" + "numeroLibros=" + numeroLibros + '}';
+        return  super.toString() + "Genero{" + "numeroLibros=" + numeroLibros + ", tipoLibro=" + tipoLibro + '}';
     }
+
+      
 
 }
