@@ -86,22 +86,16 @@ public class Genero extends Libros {
     //Método equals
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
+
+        if (!super.equals(obj)) {
+
             return false;
         }
         final Genero other = (Genero) obj;
         if (this.numeroLibros != other.numeroLibros) {
             return false;
         }
-        if (!Objects.equals(this.tipoLibro, other.tipoLibro)) {
-            return false;
-        }
+
         return true;
     }
 

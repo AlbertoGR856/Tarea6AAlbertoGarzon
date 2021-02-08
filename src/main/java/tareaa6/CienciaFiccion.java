@@ -16,10 +16,10 @@ public class CienciaFiccion extends Genero {
     //Atributo
     private int numeroPaginas;
 
-     //Constructor parametrizado. Es polimorfico ya que incluye la instrucción super()
+    //Constructor parametrizado. Es polimorfico ya que incluye la instrucción super()
     public CienciaFiccion(String nombre, String autor, String editorial, double precio, boolean disponible, int numeroLibros, String tipoLibro, int numeroPaginas) {
 
-        super(nombre,autor, editorial, precio, disponible, numeroLibros, tipoLibro);
+        super(nombre, autor, editorial, precio, disponible, numeroLibros, tipoLibro);
         this.numeroPaginas = numeroPaginas;
 
     }
@@ -30,7 +30,7 @@ public class CienciaFiccion extends Genero {
         super();
     }
 
-     //Método sobreescrito de la clase padre Libros
+    //Método sobreescrito de la clase padre Libros
     @Override
     public void libroDisponible(Libros libro) {
 
@@ -53,10 +53,10 @@ public class CienciaFiccion extends Genero {
     @Override
     public void leerLibro() {
 
-        System.out.println("Ha decidido leer el libro de Ciencia Ficcion " );
+        System.out.println("Ha decidido leer el libro de Ciencia Ficcion ");
     }
 
-      //Getters y setters
+    //Getters y setters
     public int getNumeroPaginas() {
         return numeroPaginas;
     }
@@ -65,7 +65,7 @@ public class CienciaFiccion extends Genero {
         this.numeroPaginas = numeroPaginas;
     }
 
-      //Método hashcode
+    //Método hashcode
     @Override
     public int hashCode() {
         int hash = 3;
@@ -73,18 +73,14 @@ public class CienciaFiccion extends Genero {
         return hash;
     }
 
-     //Método equals
+    //Método equals
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
+        if (!super.equals(obj)) {
+
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
+
         final CienciaFiccion other = (CienciaFiccion) obj;
         if (this.numeroPaginas != other.numeroPaginas) {
             return false;
@@ -92,7 +88,7 @@ public class CienciaFiccion extends Genero {
         return true;
     }
 
-   //Método toString. Es un método sobreescrito y polimorfico, con la instruccion super() se incluye los atributos de la clase padre e hija
+    //Método toString. Es un método sobreescrito y polimorfico, con la instruccion super() se incluye los atributos de la clase padre e hija
     @Override
     public String toString() {
         return super.toString() + "CienciaFiccion{" + "numeroPaginas=" + numeroPaginas + '}';

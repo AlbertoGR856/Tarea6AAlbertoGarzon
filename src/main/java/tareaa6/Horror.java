@@ -74,15 +74,11 @@ public class Horror extends Genero {
     //Método equals
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
+       if (!super.equals(obj)) {
+
             return false;
         }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
+       
         final Horror other = (Horror) obj;
         if (this.numeroCapitulos != other.numeroCapitulos) {
             return false;

@@ -101,6 +101,7 @@ public class Libros {
     }
 
     //Método equals
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -130,13 +131,12 @@ public class Libros {
         }
         return true;
     }
+   
 
     //Método toString
     @Override
     public String toString() {
         return "Libros{" + "nombre=" + nombre + ", autor=" + autor + ", editorial=" + editorial + ", precio=" + precio + ", disponible=" + disponible + '}';
     }
-
-
 
 }
